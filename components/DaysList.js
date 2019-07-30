@@ -41,7 +41,7 @@ class DaysList extends Component {
             <li className="days__list-item" key={i}>
                 <span className="detail days__today-span">{this.checkDays(i)}</span>
                 <div className="detail days__img-container">
-                    <img className="image" alt={day.type} src={`assets/${day.type.toLowerCase()}.png`}/>
+                    <img className="image" alt={day.type} src={require(`../assets/${day.type.toLowerCase()}.png`)}/>
                 </div>
                 <span className="detail days__temp-span">{day.temperature}&deg;C</span>
                 <span className="detail days__pollen-span">Pollen: {day.pollenCount}</span>

@@ -39,7 +39,7 @@ class TodayInfo extends Component {
                 <h3>{this.separateWeatherTypeString()}</h3>
                 <div className='today-info__panels'>
                     <div className='today-info__panels--left'>
-                        <img src={`assets/${this.state.todayData.type.toLowerCase()}.png`} />  
+                        <img src={require(`../assets/${this.state.todayData.type.toLowerCase()}.png`)} />  
                         <span className="today-info__temperature">{this.state.todayData.temperature}</span>
                         <span className="today-info__degree">&deg;C</span>
                     </div>
