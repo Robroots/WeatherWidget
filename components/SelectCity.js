@@ -72,8 +72,8 @@ class SelectCity extends Component {
 
     render() {
         return (
-            <div className="select-city">
-                <select value={this.state.value} onChange={this.handleChange}>
+            <div className="select-city-container">
+                <select className="select-city-container__select" value={this.state.value} onChange={this.handleChange}>
                     <option value='-1' disabled>Select a city</option>
                     {this.state.jsxCities && this.state.jsxCities}
                 </select>

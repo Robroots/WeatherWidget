@@ -22,11 +22,11 @@ ul{
     margin: 5px;
 }
 
-.select-city{
+.select-city-container{
     padding: 10px 15px;
 }
 
-.select-city select {
+.select-city-container__select {
     font-size: 2.5em;
     border: none;
     background: none;
@@ -45,47 +45,47 @@ ul{
     padding-top: 10px;
 }
 
-.today-info .right-panel{
+.today-info__panels--right{
     margin: 0 auto;
 }
 
-.today-info .left-panel{
+.today-info__panels--left{
     display: flex;
     align-items: flex-start;
 }
 
-.today-info .left-panel * {
+.today-info-panels__left * {
     margin-right: 5px;
 }
 
-.today-info .left-panel .temperature{
+.today-info__temperature{
     font-size: 2.5rem;
 }
 
-.degree{
+.today-info__degree{
     line-height: 2rem;
 }
 
-.today-info ul{
+.today-info__air-stats{
     flex-direction: column;
 }
 
-.days-list ul {
+.days__list {
     flex-direction: column;
 }
 
-.days-list li:not(:last-child) {
+.days__list-item:not(:last-child) {
     border-bottom: solid 1px;
 }
 
-.days-list li {
+.days__list-item {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 15px;
 }
 
-.days-list li > * {
+.days__list-item .detail {
     width: 20%;
 }
 
@@ -96,16 +96,16 @@ ul{
 }
 
 @media all and (min-width: 600px){
-    .days-list ul{
+    .days__list{
         flex-direction: row;
         justify-content: space-between;
     }
 
-    .days-list li > * {
+    .days__list-item .detail {
         width: initial;
     }
 
-    .widget .days-list li{
+    .widget .days__list-item{
         flex-direction: column;
         border-bottom: none;
         align-items: center;

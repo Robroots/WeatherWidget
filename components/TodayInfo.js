@@ -37,14 +37,14 @@ class TodayInfo extends Component {
             <div className="today-info">
                 <h3>{this.state.formattedDate}</h3>
                 <h3>{this.separateWeatherTypeString()}</h3>
-                <div className='panels'>
-                    <div className='left-panel'>
+                <div className='today-info__panels'>
+                    <div className='today-info__panels--left'>
                         <img src={`assets/${this.state.todayData.type.toLowerCase()}.png`} />  
-                        <span className="temperature">{this.state.todayData.temperature}</span>
-                        <span className="degree">&deg;C</span>
+                        <span className="today-info__temperature">{this.state.todayData.temperature}</span>
+                        <span className="today-info__degree">&deg;C</span>
                     </div>
-                    <div className='right-panel'>
-                        <ul className='air-stats'>
+                    <div className='today-info__panels--right'>
+                        <ul className='today-info__air-stats'>
                             <li>Precipitation: {this.state.todayData.precipitation}%</li>
                             <li>Humidity: {this.state.todayData.humidity}%</li>
                             <li>Wind: {this.state.todayData.windInfo.speed} mph {this.state.todayData.windInfo.direction}</li>

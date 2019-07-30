@@ -38,11 +38,13 @@ class DaysList extends Component {
 
     generateDaysList = () => {
         let generated = this.state.weatherData.map((day, i) => 
-            <li key={i}>
-                <span className="detail today-span">{this.checkDays(i)}</span>
-                <div className="detail"><img className="img" alt={day.type} src={`assets/${day.type.toLowerCase()}.png`}/></div>
-                <span className="detail temp-span">{day.temperature}&deg;C</span>
-                <span className="detail pollen-span">Pollen: {day.pollenCount}</span>
+            <li className="days__list-item" key={i}>
+                <span className="detail days__today-span">{this.checkDays(i)}</span>
+                <div className="detail days__img-container">
+                    <img className="image" alt={day.type} src={`assets/${day.type.toLowerCase()}.png`}/>
+                </div>
+                <span className="detail days__temp-span">{day.temperature}&deg;C</span>
+                <span className="detail days__pollen-span">Pollen: {day.pollenCount}</span>
             </li>
         )
         return generated
@@ -50,8 +52,8 @@ class DaysList extends Component {
 
     render() {
         return (
-            <div className='days-list'>
-                <ul>
+            <div className='days'>
+                <ul className="days__list">
                     {this.generateDaysList()}
                 </ul>
             </div>
